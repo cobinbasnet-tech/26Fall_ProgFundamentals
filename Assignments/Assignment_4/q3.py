@@ -1,2 +1,9 @@
-Python 3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)] on win32
-Enter "help" below or click "Help" above for more information.
+Spanish = 99
+Boxing = 95
+Swimming = 88
+
+total = Spanish + Swimming + Boxing
+average = (total / 300) * 100
+
+print(f"Total: {total} out of 300")
+print(f"Average: {average:.2f}%")
