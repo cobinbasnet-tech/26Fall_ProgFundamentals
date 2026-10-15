@@ -6,31 +6,21 @@ menu = {
     "sel": 5.99,
     "puff": 5.95,
     "jerry": 10.99,
-    "water": 5.99,
+    "water": 1.99,
     "banana bread": 4.25,
 }
 
 order = []
 
 
-
-
-
 def greet(name):
     print(f"Welcome to {cafe_name}, {name}!")
-
-
-
 
 
 def show_menu(menu):
     print("--- MENU ---")
     for item, price in menu.items():
         print(f"{item}: ${price:.2f}")
-
-
-
-
 
 
 def show_order(order, menu):
@@ -43,18 +33,11 @@ def show_order(order, menu):
         print(f"Items: {len(order)}")
 
 
-
-
-
 def calculate_subtotal(order, menu):
     subtotal = 0.0
     for item in order:
         subtotal += menu[item]
     return subtotal
-
-
-
-
 
 
 def get_discount(subtotal, is_member):
@@ -68,14 +51,12 @@ def get_discount(subtotal, is_member):
         return 0.0
 
 
-
-
-
 def print_receipt(name, order, menu, is_member):
     subtotal = calculate_subtotal(order, menu)
     discount = get_discount(subtotal, is_member)
     tax = (subtotal - discount) * tax_rate
     total = subtotal - discount + tax
+
     print(f"===== {cafe_name} RECEIPT =====")
     print(f"Customer: {name}")
     for item in order:
@@ -93,11 +74,9 @@ def print_receipt(name, order, menu, is_member):
 
 
 
-
-
-#  Main program 
+#                                 Main program 
 print(f"***** {cafe_name} *****")
-customer_name = input(" Hello welcome to Python cafe, What's your name? ")
+customer_name = input(" Hello welcome to Python cafe, What's the name for the order? ")
 greet(customer_name)
 
 answer = input("Are you a rewards member? (yes/no) ").lower()
